@@ -1,0 +1,87 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#080d1b">
+  <meta name="description" content="DownloadGusta: interface para organizar links e formatos de áudio e vídeo.">
+  <title>DownloadGusta | Áudio e vídeo</title>
+  <link rel="stylesheet" href="./style.css">
+  <script src="./script.js" defer></script>
+</head>
+<body>
+  <header class="header">
+    <a class="logo" href="./" aria-label="DownloadGusta início">
+      Download<span>Gusta</span>
+    </a>
+    <nav>
+      <a href="#inicio">Início</a>
+      <a href="#sobre">Sobre</a>
+    </nav>
+  </header>
+
+  <main id="inicio" class="container">
+    <p class="eyebrow">SIMPLES · MODERNO · ONLINE</p>
+    <h1>Seus conteúdos,<br><span>do seu jeito.</span></h1>
+    <p class="subtitle">
+      Insira um link de conteúdo autorizado e escolha o formato desejado.
+    </p>
+
+    <section class="panel" aria-labelledby="form-title">
+      <h2 id="form-title">Preparar conteúdo</h2>
+
+      <form id="downloadForm">
+        <label for="videoUrl">Link do YouTube</label>
+        <input
+          id="videoUrl"
+          name="videoUrl"
+          type="url"
+          placeholder="https://www.youtube.com/watch?v=..."
+          autocomplete="url"
+          required
+        >
+
+        <fieldset>
+          <legend>Escolha o formato</legend>
+          <div class="formats">
+            <label class="format-option">
+              <input type="radio" name="format" value="mp3" checked>
+              <span>🎵 MP3</span>
+              <small>Áudio</small>
+            </label>
+            <label class="format-option">
+              <input type="radio" name="format" value="mp4">
+              <span>🎬 MP4</span>
+              <small>Vídeo</small>
+            </label>
+          </div>
+        </fieldset>
+
+        <button type="submit">Preparar download →</button>
+        <p id="status" class="status" role="status" aria-live="polite">
+          Aguardando um link...
+        </p>
+      </form>
+
+      <p class="notice">
+        Esta versão valida links. Para processar arquivos, é necessário
+        um serviço de backend compatível.
+      </p>
+    </section>
+
+    <section id="sobre" class="about">
+      <h2>Sobre o DownloadGusta</h2>
+      <p>
+        Um projeto independente com uma interface simples para escolher
+        formatos de áudio e vídeo de conteúdos que você pode baixar.
+      </p>
+    </section>
+  </main>
+
+  <footer>
+    <p>© <span id="year">2026</span> DownloadGusta</p>
+    <p>Projeto independente para hospedagem estática.</p>
+  </footer>
+</body>
+</html>
